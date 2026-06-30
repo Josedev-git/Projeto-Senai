@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Monitoramento Inteligente | Projeto Integrador SENAI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0f172a;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#3b82f6;
+}
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:15px 35px;
+    border:none;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+section{
+    padding:90px 10%;
+}
+
+.titulo{
+    text-align:center;
+    font-size:2.5rem;
+    color:#0f172a;
+    margin-bottom:50px;
+}
+
+.sobre{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.problema-solucao{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.box h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.stats{
+    background:#0f172a;
+    color:white;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    text-align:center;
+}
+
+.stat h2{
+    font-size:3rem;
+    color:#3b82f6;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.dashboard{
+    text-align:center;
+}
+
+.dashboard img{
+    width:100%;
+    max-width:1000px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.tecnologias{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.tec{
+    background:#2563eb;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.cta{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+footer{
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.3rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">SENAI Project</div>
+
+    <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+    </ul>
+
+</nav>
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>Monitoramento Inteligente para Ambientes Corporativos</h1>
+
+        <p>
+            Solução desenvolvida no Projeto Integrador SENAI para acompanhar
+            temperatura e umidade em tempo real utilizando IoT, ESP32 e Python.
+        </p>
+
+        <a href="#sobre" class="btn">Conheça a Solução</a>
+
+    </div>
+
+</header>
+
+<section id="sobre">
+
+    <h2 class="titulo">Sobre o Projeto</h2>
+
+    <div class="sobre">
+
+        Nosso projeto foi desenvolvido para auxiliar empresas no monitoramento
+        das condições ambientais, oferecendo uma solução moderna que permite
+        visualizar informações importantes em tempo real e apoiar decisões mais
+        rápidas e eficientes.
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="titulo">Problema e Solução</h2>
+
+    <div class="problema-solucao">
+
+        <div class="box">
+            <h3>Problema</h3>
+
+            <p>
+                Muitas organizações não possuem acompanhamento contínuo das
+                condições ambientais, dificultando o controle e a análise
+                dos dados.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>Solução</h3>
+
+            <p>
+                Nossa plataforma utiliza sensores e monitoramento em tempo real
+                para disponibilizar informações de forma simples e intuitiva.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>24h</h2>
+        <p>Monitoramento</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Dados Registrados</p>
+    </div>
+
+    <div class="stat">
+        <h2>IoT</h2>
+        <p>Tecnologia Inteligente</p>
+    </div>
+
+    <div class="stat">
+        <h2>ESP32</h2>
+        <p>Controle Integrado</p>
+    </div>
+
+</section>
+
+<section id="beneficios">
+
+    <h2 class="titulo">Benefícios</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📊 Tempo Real</h3>
+            <p>Visualização instantânea dos dados e o valor gasto pelos aparelhos.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Conforto</h3>
+            <p>Melhora das condições do ambiente, dos gastos, da economia.</p>
+        </div>
+
+        <div class="card">
+            <h3>💾 Histórico</h3>
+            <p>Armazenamento seguro das informações, com isso pode se ver onde está gastando mais.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Fácil Uso</h3>
+            <p>Interface simples e intuitiva.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="dashboard" class="dashboard">
+
+    <h2 class="titulo">Dashboard Inteligente</h2>
+
+    <p style="margin-bottom:30px;">
+        Visualização clara e organizada das informações coletadas.
+    </p>
+
+    <img src="dashboard.png" alt="Dashboard do Sistema">
+
+</section>
+
+<section id="tecnologias">
+
+    <h2 class="titulo">Tecnologias Utilizadas</h2>
+
+    <div class="tecnologias">
+
+        <div class="tec">ESP32</div>
+        <div class="tec">Python</div>
+        <div class="tec">PyQt5</div>
+        <div class="tec">SQLite</div>
+        <div class="tec">IoT</div>
+        <div class="tec">Sensores</div>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>Transformando Dados em Decisões Inteligentes</h2>
+
+    <p style="margin-bottom:30px;">
+        Tecnologia, inovação e monitoramento em tempo real para ambientes mais eficientes.
+    </p>
+
+    <a href="#" class="btn">Solicitar Demonstração</a>
+
+</section>
+
+<footer>
+
+    <p>
+        Projeto Integrador SENAI © 2026
+    </p>
+
+    <p>
+        Desenvolvido por alunos do SENAI
+    </p>
+
+</footer>
+
+</body>
+</html>

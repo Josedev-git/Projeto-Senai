@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Cadastro</class>
+ <widget class="QDialog" name="Cadastro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1075</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QDialog{background-color:white;}
+QLineEdit{
+border:2px solid #D0D0D0;
+border-radius:12px;
+padding-left:10px;
+background:white;
+font-size:11pt;
+}
+QLineEdit:focus{border:2px solid #020B4F;}
+QPushButton{
+background-color: rgb(7, 13, 50);
+color:white;
+border:none;
+border-radius:12px;
+font-size:12pt;
+font-weight:bold;
+}
+   </string>
+  </property>
+  <widget class="QFrame" name="frame_direita">
+   <property name="geometry">
+    <rect>
+     <x>1399</x>
+     <y>0</y>
+     <width>521</width>
+     <height>1080</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(7, 13, 50);
+border-top-left-radius:120px;
+border-bottom-left-radius:120px;
+    </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_titulo">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>80</y>
+     <width>301</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #020B4F;
+font-size: 28pt;
+font-weight: bold;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>ELETRICITYS</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_subtitulo">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>140</y>
+     <width>191</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #555555;
+font-size: 22px;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>Cadastre-se aqui</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linha_nome">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>300</y>
+     <width>750</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linha_email">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>410</y>
+     <width>750</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linha_senha">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>520</y>
+     <width>750</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="linha_confirm">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>630</y>
+     <width>750</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_criarc">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>740</y>
+     <width>750</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+background-color: rgb(7, 13, 50);
+color: white;
+border-radius: 8px;
+font-family: 'Poppins';
+font-weight: bold;
+font-size: 18px;
+width: 50px;
+height: 50px;</string>
+   </property>
+   <property name="text">
+    <string>CRIAR CONTA</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>265</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #222222;
+font-size: 18px;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>Nome Completo</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>365</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #222222;
+font-size: 18px;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>Email</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>486</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #222222;
+font-size: 18px;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>Senha</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>600</y>
+     <width>141</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #222222;
+font-size: 18px;
+background: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string>Confirmar Senha</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="btn_voltar">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>690</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>161</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: 'Poppins';
+font-weight: bold;
+font-size: 14px;
+color: black;
+background-color: none;</string>
+   </property>
+   <property name="text">
+    <string>           Voltar</string>
+   </property>
+   <property name="icon">
+    <iconset theme="none">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>linha_nome</tabstop>
+  <tabstop>linha_email</tabstop>
+  <tabstop>linha_senha</tabstop>
+  <tabstop>linha_confirm</tabstop>
+  <tabstop>btn_voltar</tabstop>
+  <tabstop>btn_criarc</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

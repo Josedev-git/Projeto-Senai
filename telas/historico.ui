@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Histórico de Cálculos</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame_menu">
+     <property name="minimumSize">
+      <size>
+       <width>180</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #1e1e2f; color: white; border: none;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_menu">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_logo">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>⚡ Energia</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_top">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_voltarinicio">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { padding: 10px; border: none; text-align: left; } QPushButton:hover { background-color: #2b2b45; }
+QPushButton { background-color: transparent; border-radius: 5px; text-align: left; padding-left: 20px; font-size: 15px;} 
+QPushButton:hover { background-color: #3e3e5e; }</string>
+        </property>
+        <property name="text">
+         <string>Início</string>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_voltardash">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { padding: 10px; border: none; text-align: left; } QPushButton:hover { background-color: #2b2b45; }
+QPushButton { background-color: transparent; border-radius: 5px; text-align: left; padding-left: 20px; font-size: 15px;} 
+QPushButton:hover { background-color: #3e3e5e; }</string>
+        </property>
+        <property name="text">
+         <string>Dashboard</string>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_menu">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_content">
+     <property name="contentsMargins" stdset="0">
+      <number>30</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_titulo">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #1e1e2f;
+font-size: 30px;</string>
+       </property>
+       <property name="text">
+        <string>Lista de Aparelhos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tabela_aparelhos">
+       <property name="minimumSize">
+        <size>
+         <width>950</width>
+         <height>511</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>898</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableWidget { 
+    border: 1px solid #dee2e6; 
+    gridline-color: #f1f1f1; 
+    background-color: white; 
+    color: black; 
+    font-size: 20px; }
+
+QHeaderView::section { 
+    background-color: #f8f9fa; 
+    padding: 8px; 
+    border: 1px solid #dee2e6; 
+    font-weight: bold; 
+    font-size: 20px;
+}</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>Aparelho</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Consumo (kWh)</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Custo (R$)</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_limpar">
+       <property name="styleSheet">
+        <string notr="true">background-color: #ff5252; color: white; border-radius: 5px; padding: 10px; font-weight: bold;
+font-size: 20px;</string>
+       </property>
+       <property name="text">
+        <string>Limpar Histórico</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
